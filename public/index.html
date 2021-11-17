@@ -6,24 +6,100 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    
+    <!-- External Fonts - Bungee 400, Source Sans Pro 600, and 300-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <div id="nav-box">
+        <div id="logo-box">
+          <span id="logo">tweeter</span>
+        </div>
+        <div id="tweet-link">
+          <span id="write-tweet"> <strong>Write</strong> a new tweet</span>
+          <i class="fa-solid fa-angles-down" id="down-arrow" ></i>
+        </div>
+      </div>
     </nav>
 
+    <header id="avatar-header">
+      <div id="profile-picture-div">
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div id="profile-name-div">
+          <h2><b>Your</b> Name</h2>
+      </div>
+    </header>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <form action="/tweets" method="POST">
+          <div id="tweet-text-div">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+          </div>
+          <div id="tweet-submit-div">
+            <button id="tweet-submit-button" type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <section>
+        <article class="tweet-post">
+          <header class="tweet-header-footer">
+            <div>
+              <img src="https://avatars.dicebear.com/api/micah/rosewood.svg?size=80"/>
+            </div>
+            <div>
+              <h3>Barbara</h3>
+            </div>
+            <div>
+              <p>@bubbles23</p>
+            </div>
+          </header>
+          <div id="tweet-message-div">
+            <span>I love penguins! ^-^</span>
+          </div>
+          <footer class="tweet-header-footer">
+            <div>
+              <span>2 Days Ago</span>
+            </div>
+            <div>
+              <span class="flag">
+                <i class="fas fa-flag"></i>
+              </span>
+              <span class="retweet">
+                <i class="fas fa-retweet"></i>
+              </span>
+              <span class="heart">
+                <i class="fas fa-heart"></i>
+              </span>
+            </div>
+          </footer>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
