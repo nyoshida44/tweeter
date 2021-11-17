@@ -1,0 +1,16 @@
+#avatar-header {
+  background-color: #70e676;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  height: 400px;
+  margin-top: 120px;
+}
+
+#profile-picture-div {
+  display: flex;
+  justify-content: center;
+}
+
+#profile-name-div {
+  display: flex;
+  justify-content: center;
+}
