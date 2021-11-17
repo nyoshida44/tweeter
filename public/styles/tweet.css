@@ -16,3 +16,19 @@
   padding: 0.5em;
   border-bottom: #808080 solid 5px;
 }
+
+.tweet-post:hover {
+  box-shadow: 0.25em 0.25em #008000;
+}
+
+.flag:hover {
+  color: #ffd700;
+}
+
+.retweet:hover {
+  color: #ffd700;
+}
+
+.heart:hover {
+  color: #ffd700;
+}
