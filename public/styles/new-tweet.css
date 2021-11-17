@@ -1,0 +1,26 @@
+.new-tweet {
+  padding: 1em;
+}
+
+#tweet-text-div {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+}
+
+#tweet-text {
+  background-color: #f4f1ec;
+  border: none;
+  border-bottom: #808080 solid 5px;
+}
+
+#tweet-submit-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+#tweet-submit-button {
+  font-family: 'Bungee', cursive;
+  background-color: #f4f1ec;
+}
