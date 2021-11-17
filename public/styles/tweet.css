@@ -1,6 +1,7 @@
 .tweet-post {
   border: 0.2em solid #70e676;
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  margin-top: 1em;
 }
 
 .tweet-header-footer {
@@ -10,7 +11,7 @@
   justify-content: space-between;
 }
 
-#tweet-message-div {
+.tweet-message-div {
   width: 95%;
   margin: 0 auto;
   padding: 0.5em;
