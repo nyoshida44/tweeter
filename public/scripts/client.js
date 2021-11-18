@@ -32,17 +32,25 @@ $(document).ready(function() {
     $tweetArticle.append($messageDiv);
     $tweetArticle.append($tweetFooter); 
 
-    $('#tweet-section').append($tweetArticle);
+    return $tweetArticle;
     
   }
 
   const renderTweets = function(tweets) {
     let $tweet;
     for (const tweet of tweets) {
-      createTweetElement(tweet);
-      $tweet = $('#tweet-section').append(tweet);
+      $tweet = $('#tweet-section').append(createTweetElement(tweet));
     }
     return $tweet;
+  }
+
+  const loadTweets = function() {
+    $.ajax({
+      url: "http://localhost:8080/tweets",
+      method: "GET",
+    }).then((result) => {
+      renderTweets(result);
+    });
   }
 
   $("form").on("submit", function (event) {
@@ -63,20 +71,20 @@ $(document).ready(function() {
       type: "POST",
       url: "http://localhost:8080/tweets",
       data: $(this).serialize(),
-    })
+    }).then((result) => {
+      $.ajax({
+        url: "http://localhost:8080/tweets",
+        method: "GET",
+      }).then((result) => {
+        let lastTweet = result[Object.keys(result)[Object.keys(result).length - 1]]
+        $('#tweet-section').prepend(createTweetElement(lastTweet));
+      });
+    });
 
   });
 
-  const loadTweets = function() {
-    $.ajax({
-      url: "http://localhost:8080/tweets",
-      method: "GET",
-    }).then((result) => {
-      renderTweets(result);
-    });
-  }
-
   loadTweets();
+
 });
 
 
