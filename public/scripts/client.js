@@ -45,7 +45,7 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     let $tweet;
     for (const tweet of tweets) {
-      $tweet = $('#tweet-section').append(createTweetElement(tweet));
+      $tweet = $('#tweet-section').prepend(createTweetElement(tweet));
     }
     return $tweet;
   }
@@ -64,14 +64,20 @@ $(document).ready(function() {
     event.preventDefault();
       
     if ($("#tweet-text").val().length === 0) {
-      alert("No tweet content present");
+      $( "#error-section" ).slideDown( "slow", function() {
+        $("#error-span").html("⚠️ ERROR: No characters ⚠️");
+      });
       return;
     }
 
     if ($("#tweet-text").val().length > 140) {
-      alert("Too many Characters");
+      $( "#error-section" ).slideDown( "slow", function() {
+        $("#error-span").html("⚠️ ERROR: Too many characters ⚠️");
+      });
       return;
     }
+
+    $( "#error-section" ).slideUp( "slow" )
 
     $.ajax({
       type: "POST",
