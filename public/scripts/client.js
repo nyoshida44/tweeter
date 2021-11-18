@@ -6,6 +6,12 @@
 
 $(document).ready(function() {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(tweet) {
 
     const $tweetArticle = $('<article class="tweet-post"></article>')
@@ -16,7 +22,7 @@ $(document).ready(function() {
     const $nameDiv = $('<div><h3>' + tweet.user.name + '</h3></div>')
     const $handleDiv = $('<div><p>' + tweet.user.handle + '</p></div>')
 
-    const $messageDiv = $('<div class="tweet-message-div"><span>' + tweet.content.text + '</span></div>')
+    const $messageDiv = $('<div class="tweet-message-div"><span>' + escape(tweet.content.text) + '</span></div>')
 
     const $dateDiv = $('<div><span>' + timeago.format(tweet.created_at) + '</span></div>')
     const $tweetOptionsDiv = $('<div><span class="flag"> <i class="fas fa-flag"></i> </span><span class="retweet"> <i class="fas fa-retweet"></i> </span><span class="heart"> <i class="fas fa-heart"></i> </span></div>')
