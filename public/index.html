@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/error.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -59,7 +60,14 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+
+      <section hidden id="error-section">
+        <div>
+          <span> Error </span>
+        </div>
+      </section>
+
+      <section id="new-tweet">
         <form action="/tweets" method="POST">
           <div id="tweet-text-div">
             <label for="tweet-text">What are you humming about?</label>
@@ -71,6 +79,7 @@
           </div>
         </form>
       </section>
+
       <section id="tweet-section">
         <article class="tweet-post">
           <header class="tweet-header-footer">
@@ -105,6 +114,7 @@
           </footer>
         </article>
       </section>
+
     </main>
   </body>
 </html>
