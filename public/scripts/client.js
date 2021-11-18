@@ -46,8 +46,19 @@ $(document).ready(function() {
   }
 
   $("form").on("submit", function (event) {
-    event.preventDefault();
     
+    event.preventDefault();
+      
+    if ($("#tweet-text").val().length === 0) {
+      alert("No tweet content present");
+      return;
+    }
+
+    if ($("#tweet-text").val().length > 140) {
+      alert("Too many Characters");
+      return;
+    }
+
     $.ajax({
       type: "POST",
       url: "http://localhost:8080/tweets",
