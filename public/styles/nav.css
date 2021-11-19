@@ -1,34 +1,74 @@
-#nav-box {
-  background-color: #4056A1;
-  height: 120px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
+@media only screen and (min-width:720px) {
+  #nav-box {
+    background-color: #4056A1;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+  }
+  
+  #logo {
+    font-family: 'Bungee', cursive;
+    font-size: 40px;
+    color: #ffffff;
+  }
+  
+  #logo-box {
+    padding: 2em 1.5em 0.5em 1.5em;
+  }
+  
+  #tweet-link {
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #write-tweet {
+    color: #ffffff;
+  }
+  
+  #down-arrow {
+    align-self: center;
+    color: #ffa500;
+  }
 }
 
-#logo {
-  font-family: 'Bungee', cursive;
-  font-size: 40px;
-  color: #ffffff;
-}
+@media only screen and (max-width:720px) {
+  #nav-box {
+    background-color: #4056A1;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+  }
 
-#logo-box {
-  padding: 2em 1.5em 0.5em 1.5em;
-}
-
-#tweet-link {
-  padding: 1.5em 1.5em 1.5em 1.5em;
-  display: flex;
-  flex-direction: column;
-}
-
-#write-tweet {
-  color: #ffffff;
-}
-
-#down-arrow {
-  align-self: center;
-  color: #ffa500;
+  #logo {
+    font-family: 'Bungee', cursive;
+    font-size: 1em;
+    color: #ffffff;
+  }
+  
+  #logo-box {
+    padding: 2em 1.5em 0.5em 1.5em;
+  }
+  
+  #tweet-link {
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #write-tweet {
+    font-size: 0.75em;
+    color: #ffffff;
+  }
+  
+  #down-arrow {
+    align-self: center;
+    color: #ffa500;
+  }
 }
