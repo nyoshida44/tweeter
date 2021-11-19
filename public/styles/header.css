@@ -1,3 +1,5 @@
+/* CSS for app header. Where user's name and avatar would be. */
+
 @media only screen and (max-width:1024px) {
   #avatar-header {
     background-color: #70e676;
