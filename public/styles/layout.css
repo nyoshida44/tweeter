@@ -25,8 +25,25 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-.container {
-  width: 90%;
-  margin: 0 auto;
-  background-color: #f4f1ec;
-}
+ @media only screen and (max-width:1024px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #f4f1ec;
+  }
+ }
+
+ @media only screen and (min-width:1024px) {
+  .container {
+    width: 60%;
+    height: 400px;
+    margin-top: 120px;
+    background-color: #f4f1ec;
+  }
+
+  #desktop-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+ }

@@ -48,73 +48,74 @@
       </div>
     </nav>
 
-    <header id="avatar-header">
-      <div id="profile-picture-div">
+    <div id="desktop-div">
+      <header id="avatar-header">
+        <div id="profile-picture-div">
           <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div id="profile-name-div">
+        </div>
+        <br>
+        <div id="profile-name-div">
           <h2><b>Your</b> Name</h2>
-      </div>
-    </header>
+        </div>
+      </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+      <main class="container">
 
-      <section hidden id="error-section">
-        <div>
-          <span id="error-span"></span>
-        </div>
-      </section>
-
-      <section id="new-tweet">
-        <form action="/tweets" method="POST">
-          <div id="tweet-text-div">
-            <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
+        <section hidden id="error-section">
+          <div>
+            <span id="error-span"></span>
           </div>
-          <div id="tweet-submit-div">
-            <button id="tweet-submit-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
+        </section>
 
-      <section id="tweet-section">
-        <article class="tweet-post">
-          <header class="tweet-header-footer">
-            <div>
-              <img src="https://avatars.dicebear.com/api/micah/rosewood.svg?size=80"/>
+        <section id="new-tweet">
+          <form action="/tweets" method="POST">
+            <div id="tweet-text-div">
+              <label for="tweet-text">What are you humming about?</label>
+              <textarea name="text" id="tweet-text"></textarea>
             </div>
-            <div>
-              <h3>Barbara</h3>
+            <div id="tweet-submit-div">
+              <button id="tweet-submit-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
             </div>
-            <div>
-              <p>@bubbles23</p>
-            </div>
-          </header>
-          <div class="tweet-message-div">
-            <span>I love penguins! ^-^</span>
-          </div>
-          <footer class="tweet-header-footer">
-            <div>
-              <span>2 Days Ago</span>
-            </div>
-            <div>
-              <span class="flag">
-                <i class="fas fa-flag"></i>
-              </span>
-              <span class="retweet">
-                <i class="fas fa-retweet"></i>
-              </span>
-              <span class="heart">
-                <i class="fas fa-heart"></i>
-              </span>
-            </div>
-          </footer>
-        </article>
-      </section>
+          </form>
+        </section>
 
+        <section id="tweet-section">
+          <article class="tweet-post">
+            <header class="tweet-header-footer">
+              <div>
+                <img src="https://avatars.dicebear.com/api/micah/rosewood.svg?size=80"/>
+              </div>
+              <div>
+                <h3>Barbara</h3>
+              </div>
+              <div>
+                <p>@bubbles23</p>
+              </div>
+            </header>
+            <div class="tweet-message-div">
+              <span>I love penguins! ^-^</span>
+            </div>
+            <footer class="tweet-header-footer">
+              <div>
+                <span>2 Days Ago</span>
+              </div>
+              <div>
+                <span class="flag">
+                  <i class="fas fa-flag"></i>
+                </span>
+                <span class="retweet">
+                  <i class="fas fa-retweet"></i>
+                </span>
+                <span class="heart">
+                  <i class="fas fa-heart"></i>
+                </span>
+              </div>
+            </footer>
+          </article>
+        </section>
+      </div>
     </main>
   </body>
 </html>

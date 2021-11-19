@@ -1,16 +1,39 @@
-#avatar-header {
-  background-color: #70e676;
-  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-  height: 400px;
-  margin-top: 120px;
+@media only screen and (max-width:1024px) {
+  #avatar-header {
+    background-color: #70e676;
+    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+    height: 400px;
+    margin-top: 120px;
+  }
+  
+  #profile-picture-div {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #profile-name-div {
+    display: flex;
+    justify-content: center;
+  }
 }
 
-#profile-picture-div {
-  display: flex;
-  justify-content: center;
-}
-
-#profile-name-div {
-  display: flex;
-  justify-content: center;
+@media only screen and (min-width:1024px) {
+  #avatar-header {
+    background-color: #70e676;
+    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+    width: 30%;
+    height: 400px;
+    margin-top: 160px;
+  }
+  
+  #profile-picture-div {
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #profile-name-div {
+    display: flex;
+    justify-content: center;
+  }
 }
