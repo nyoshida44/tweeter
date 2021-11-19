@@ -49,6 +49,7 @@
       </div>
     </nav>
 
+    <!-- Div specifically for CSS in desktop display -->
     <div id="desktop-div">
       <header id="avatar-header">
         <div id="profile-picture-div">
@@ -63,12 +64,14 @@
     <!-- Page-specific (main) content here -->
       <main class="container">
 
+        <!-- Error section when an error occurs. Starts hidden -->
         <section hidden id="error-section">
           <div>
             <span id="error-span"></span>
           </div>
         </section>
 
+        <!-- Section for writing a new tweet. Contains form to submit a new tweet. -->
         <section id="new-tweet">
           <form action="/tweets" method="POST">
             <div id="tweet-text-div">
@@ -82,6 +85,7 @@
           </form>
         </section>
 
+        <!-- Section for posting all tweets. Ordered from newest to oldest -->
         <section id="tweet-section">
           <article class="tweet-post">
             <header class="tweet-header-footer">
