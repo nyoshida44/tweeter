@@ -23,6 +23,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Mobile Version"]()
-!["Desktop Version"]()
-!["/tweets Page"]()
+!["Mobile Version"](https://github.com/nyoshida44/tweeter/blob/master/docs/mobile.png?raw=true)
+!["Desktop Version"](https://github.com/nyoshida44/tweeter/blob/master/docs/desktop.png?raw=true)
+!["/tweets Page"](https://github.com/nyoshida44/tweeter/blob/master/docs/tweetdata.png?raw=true)
