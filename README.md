@@ -1,4 +1,4 @@
-# Tweeter Project
+# Tweeter Project by Nicholas Yoshida and Lighthouse Labs
 
 Tweeter is a simple, single-page Twitter clone.
 
@@ -15,4 +15,14 @@ This repository is the starter code for the project: Students will fork and clon
 ## Dependencies
 
 - Express
+- Body-Parser
+- Chance
+- Express
+- MD5
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Mobile Version"]()
+!["Desktop Version"]()
+!["/tweets Page"]()
